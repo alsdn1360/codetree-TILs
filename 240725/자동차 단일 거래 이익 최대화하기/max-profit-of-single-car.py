@@ -15,4 +15,9 @@ del arr[0:buyYear]
 sellYear = arr.index(max(arr))
 sell = arr[sellYear]
 
-print(sell - buy)
+gain = sell - buy
+
+if gain > 0:
+    print(gain)
+else:
+    print('0')
