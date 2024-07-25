@@ -1,14 +1,15 @@
 n = int(input())
 prices = list(map(int, input().split()))
 
-min_price = 0
+min_price = float('inf')
 max_profit = 0
 min_price_index = 0
 
 for i in range(n):
-    min_price_index = prices.index(min(prices))
-    min_price = prices[min_price_index]
-
+    if prices[i] < min_price:
+        min_price = prices[i]
+        min_price_index = i
+    
     if i > min_price_index and prices[i] - min_price > max_profit:
         max_profit = prices[i] - min_price
 
