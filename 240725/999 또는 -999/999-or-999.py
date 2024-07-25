@@ -1,6 +1,9 @@
 arr = list(map(int, input().split()))
 
-endIndex = arr.index(999 or -999)
+if 999 in arr:
+    endIndex = arr.index(999)
+elif -999 in arr:
+    endIndex = arr.index(-999)
 
 newArr = []
 
