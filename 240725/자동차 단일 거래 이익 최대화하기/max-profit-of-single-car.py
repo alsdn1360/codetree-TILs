@@ -10,7 +10,7 @@ sell = 0
 buyYear = arr.index(min(arr))
 buy = arr[buyYear]
 
-del arr[0:buyYear]
+del arr[:buyYear]
 
 sellYear = arr.index(max(arr))
 sell = arr[sellYear]
