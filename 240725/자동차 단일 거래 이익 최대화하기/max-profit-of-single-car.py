@@ -1,23 +1,15 @@
 n = int(input())
+prices = list(map(int, input().split()))
 
-arr = list(map(int, input().split()))
+min_price = 0
+max_profit = 0
+min_price_index = 0
 
-buyYear = 0
-buy = 0
-sellYear = 0
-sell = 0
+for i in range(n):
+    min_price_index = prices.index(min(prices))
+    min_price = prices[min_price_index]
 
-buyYear = arr.index(min(arr))
-buy = arr[buyYear]
+    if i > min_price_index and prices[i] - min_price > max_profit:
+        max_profit = prices[i] - min_price
 
-del arr[:buyYear]
-
-sellYear = arr.index(max(arr))
-sell = arr[sellYear]
-
-gain = sell - buy
-
-if gain > 0:
-    print(gain)
-else:
-    print('0')
+print(max(max_profit, 0))
