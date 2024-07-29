@@ -6,7 +6,6 @@ arr = [
 ]
 
 cnt = 1
-j = 1
 
 for diagonal in range(n + m - 1):
     if diagonal < m:
