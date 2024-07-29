@@ -13,7 +13,7 @@ for diagonal in range(n + m - 1):
             arr[i][diagonal - i] = cnt
             cnt += 1
     else:
-        for i in range(diagonal - m + 1,  min(diagonal + 1, m)):
+        for i in range(diagonal - m + 1,  min(diagonal + 1, n)):
             arr[i][diagonal - i] = cnt
             cnt += 1
 
