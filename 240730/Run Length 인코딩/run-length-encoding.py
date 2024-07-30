@@ -12,9 +12,6 @@ for i in range(1, len(word)):
     if sameAlpha == word[i]:
         cnt += 1
         rle.pop()
-
-        if i == len(word) - 1:
-            rle.append(cnt)
     else:
         rle.pop()
         rle.append(cnt)
@@ -22,6 +19,9 @@ for i in range(1, len(word)):
 
         sameAlpha = word[i]
         cnt = 1
+    
+    if i == len(word) - 1:
+        rle.append(cnt)
 
 print(len(rle))
 
