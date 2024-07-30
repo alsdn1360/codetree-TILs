@@ -2,11 +2,11 @@ word = input()
 rle = []
 
 sameAlpha = word[0]
-cnt = 1
+cnt = 0
 
 rle.append(sameAlpha)
 
-for i in range(1, len(word)):
+for i in range(len(word)):
     rle.append(word[i])
 
     if sameAlpha == word[i]:
