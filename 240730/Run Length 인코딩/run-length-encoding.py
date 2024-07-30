@@ -23,7 +23,7 @@ for i in range(len(word)):
     if i == len(word) - 1:
         rle.append(cnt)
 
-print(len(rle))
+result = ''.join(str(word) for word in rle)
 
-for i in rle:
-    print(i, end = '')
+print(len(result))
+print(result)
