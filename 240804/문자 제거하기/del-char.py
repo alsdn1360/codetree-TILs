@@ -6,7 +6,7 @@ iter = len(word) - 1
 for i in range(iter):
     remove = int(input())
 
-    if remove > len(arr):
+    if remove >= len(arr):
         remove = len(arr) - 1
 
     arr.pop(remove)
