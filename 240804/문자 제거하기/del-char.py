@@ -1,7 +1,9 @@
 word = input()
 arr = list(word)
 
-for i in range(len(word) - 1):
+iter = len(word) - 1
+
+for i in range(iter):
     remove = int(input())
 
     if remove > len(arr):
