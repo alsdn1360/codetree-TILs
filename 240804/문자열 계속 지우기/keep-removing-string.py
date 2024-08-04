@@ -1,17 +1,17 @@
-word = input()
-remove = input()
+A = input()
+B = input()
 
 while(1):
-    if remove in word:
-        remove_index = word.find(remove)
+    if B in A:
+        B_remove = A.find(B)
 
-        arr_word = list(word)
+        arr_A = list(A)
 
-        for j in range(len(remove)):
-            arr_word.pop(remove_index)
+        for j in range(len(B)):
+            arr_A.pop(B_remove)
 
-        word = ''.join(arr_word)
+        A = ''.join(arr_A)
     else:
         break
 
-print(word)
+print(A)
