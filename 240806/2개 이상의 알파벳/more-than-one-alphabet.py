@@ -3,7 +3,7 @@ def check_different_two_cnt(word):
     cnt = 0
 
     for i in range(len(word)):
-        for j in range(i + 1, len(word) - i - 1):
+        for j in range(i + 1, len(word) - i):
             if word[i] != word[j]:
                 cnt += 1
             
