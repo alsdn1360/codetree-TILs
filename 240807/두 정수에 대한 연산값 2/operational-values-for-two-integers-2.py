@@ -1,14 +1,15 @@
 a, b = map(int, input().split())
 
 def func(a, b):
-    a = a + 10
-    b = b * 2
-    
+    if a > b:
+        a *= 2
+        b += 10
+    else:
+        a += 10
+        b *= 2
+
     return a, b
 
-if a > b:
-    a, b = func(b, a)
-    print(a, b)
-else:
-    a, b = func(a, b)
-    print(a, b)
+a, b = func(a, b)
+
+print(a, b)
