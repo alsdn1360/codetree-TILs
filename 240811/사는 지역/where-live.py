@@ -16,4 +16,4 @@ for i in range(1, n):
     if people[min_idx].name < people[i].name:
         min_idx = i
 
-print(f'name {people[i].name}\naddr {people[i].street}\ncity {people[i].location}')
+print(f'name {people[min_idx].name}\naddr {people[min_idx].street}\ncity {people[min_idx].location}')
