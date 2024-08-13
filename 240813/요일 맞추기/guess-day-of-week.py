@@ -13,11 +13,9 @@ def cal_day_of_week(month1, day1, month2, day2):
     elapse_days = cal_elapse_day(month2, day2) - cal_elapse_day(month1, day1)
 
     if elapse_days < 0:
-        elapse_days = abs(elapse_days) % 7
-        return day_of_week[-elapse_days]
+        return day_of_week[-(abs(elapse_days) % 7)]
     else:
-        elapse_days = abs(elapse_days) % 7
-        return day_of_week[elapse_days]
+        return day_of_week[(abs(elapse_days) % 7)]
 
 m1, d1, m2, d2 = tuple(map(int, input().split()))
 
