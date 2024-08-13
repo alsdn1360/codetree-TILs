@@ -10,4 +10,9 @@ def cal_elapse_day(month, day):
 
 m1, d1, m2, d2 = tuple(map(int, input().split()))
 
-print(cal_elapse_day(m2, d2) - cal_elapse_day(m1, d1))
+result = cal_elapse_day(m2, d2) - cal_elapse_day(m1, d1)
+
+if result == 0:
+    print('1')
+else:
+    print(result)
