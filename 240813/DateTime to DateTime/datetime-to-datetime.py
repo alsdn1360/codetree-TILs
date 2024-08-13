@@ -1,5 +1,5 @@
 def cal_elapse_time(day, hour, minute):
-    if hour < 11:
+    if day == 11 and hour < 11:
         return -1
     elif hour == 11 and minute < 11:
         return -1
