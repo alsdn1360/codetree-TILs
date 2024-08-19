@@ -1,5 +1,7 @@
 n = int(input())
 area = [0] * 2000000
+area_black = [0] * 2000000
+area_white = [0] * 2000000
 area_color = ['Null'] * 2000000
 last_index = 1000000
 
@@ -8,24 +10,26 @@ for _ in range(n):
     x = int(x)
 
     if direction == 'R':
-        x = last_index + x - 1
+        x = last_index + x
 
-        for i in range(last_index, x + 1):
+        for i in range(last_index, x):
             area[i] += 1
+            area_black[i] += 1
 
-            if area[i] >= 4:
+            if area[i] >= 4 and area_black[i] >= 2:
                 area_color[i] = 'G'
             else:
                 area_color[i] = 'B'
             
-        last_index = x
+        last_index = x - 1
     elif direction == 'L':
         x = last_index - x + 1
 
         for i in range(x, last_index + 1):
             area[i] += 1
+            area_white[i] += 1
 
-            if area[i] >= 4:
+            if area[i] >= 4 and area_white[i] >= 2:
                 area_color[i] = 'G'
             else:
                 area_color[i] = 'W'
