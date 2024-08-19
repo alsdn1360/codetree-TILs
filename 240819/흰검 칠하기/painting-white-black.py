@@ -1,9 +1,9 @@
 n = int(input())
-area = [0] * 2000000
-area_black = [0] * 2000000
-area_white = [0] * 2000000
-area_color = ['Null'] * 2000000
-last_index = 1000000
+area = [0] * 200000
+area_black = [0] * 200000
+area_white = [0] * 200000
+area_color = ['Null'] * 200000
+last_index = 100000
 
 for _ in range(n):
     x, direction = tuple(input().split())
