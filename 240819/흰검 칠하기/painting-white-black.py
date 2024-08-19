@@ -8,9 +8,9 @@ for _ in range(n):
     x = int(x)
 
     if direction == 'R':
-        x = last_index + x
+        x = last_index + x - 1
 
-        for i in range(last_index, x):
+        for i in range(last_index, x + 1):
             area[i] += 1
 
             if area[i] >= 4:
@@ -18,7 +18,7 @@ for _ in range(n):
             else:
                 area_color[i] = 'B'
             
-        last_index = x - 1
+        last_index = x
     elif direction == 'L':
         x = last_index - x + 1
 
