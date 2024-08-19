@@ -1,5 +1,5 @@
 n = int(input())
-block = [0] * 100
+block = [0] * 101
 
 for _ in range(n):
     x1, x2 = tuple(map(int, input().split()))
