@@ -16,7 +16,7 @@ for _ in range(n):
             area[i] += 1
             area_black[i] += 1
 
-            if area[i] >= 4 and area_black[i] >= 2:
+            if area[i] >= 4 and area_white[i] >= 2 and area_black[i] >= 2:
                 area_color[i] = 'G'
             else:
                 area_color[i] = 'B'
@@ -29,7 +29,7 @@ for _ in range(n):
             area[i] += 1
             area_white[i] += 1
 
-            if area[i] >= 4 and area_white[i] >= 2:
+            if area[i] >= 4 and area_white[i] >= 2 and area_black[i] >= 2:
                 area_color[i] = 'G'
             else:
                 area_color[i] = 'W'
