@@ -18,11 +18,11 @@ for _ in range(n):
             else:
                 area_color[i] = 'B'
             
-        last_index = x
+        last_index = x - 1
     elif direction == 'L':
-        x = last_index - x
+        x = last_index - x + 1
 
-        for i in range(x, last_index):
+        for i in range(x, last_index + 1):
             area[i] += 1
 
             if area[i] >= 4:
