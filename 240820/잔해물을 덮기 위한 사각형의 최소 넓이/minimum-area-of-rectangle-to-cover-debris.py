@@ -40,10 +40,10 @@ for x in range(max_range):
     for y in range(max_range):
         if matrix[x][y] == 1:
             if x > max_x:
-                max_x = x + 1
+                max_x = x
             if y > max_y:
-                max_y = y + 1
+                max_y = y
 
-area = (max_x - min_x) * (max_y - min_y)
+area = (max_x - min_x + 1) * (max_y - min_y + 1)
 
 print(area)
