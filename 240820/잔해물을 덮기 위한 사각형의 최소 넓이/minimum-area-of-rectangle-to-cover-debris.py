@@ -28,9 +28,13 @@ min_y = 2001
 max_x = 0
 max_y = 0
 
+is_zero = True
+
 for x in range(max_range):
     for y in range(max_range):
         if matrix[x][y] == 1:
+            is_zero = False
+
             if x < min_x:
                 min_x = x
             if y < min_y:
@@ -44,6 +48,9 @@ for x in range(max_range):
             if y > max_y:
                 max_y = y
 
-area = (max_x - min_x + 1) * (max_y - min_y + 1)
+if is_zero:
+    area = 0
+else:
+    area = (max_x - min_x + 1) * (max_y - min_y + 1)
 
 print(area)
