@@ -44,9 +44,6 @@ for x in range(max_range):
             if y > max_y:
                 max_y = y + 1
 
-print(min_x, min_y)
-print(max_x, max_y)
-
 area = (max_x - min_x) * (max_y - min_y)
 
 print(area)
