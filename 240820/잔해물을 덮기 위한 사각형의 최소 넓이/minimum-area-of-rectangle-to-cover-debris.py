@@ -17,33 +17,17 @@ for i in range(2):
     if i == 0:
         for x in range(x1, x2):
             for y in range(y1, y2):
-                matrix[x][y] = 1
+                matrix[x][y] += 1
     else:
         for x in range(x1, x2):
             for y in range(y1, y2):
-                matrix[x][y] = 0
+                matrix[x][y] += 2
             
-min_x = 2001
-min_y = 2001
-max_x = 0
-max_y = 0
+area = 0
 
 for x in range(max_range):
     for y in range(max_range):
-        if matrix[x][y] == 1:
-            if x < min_x:
-                min_x = x
-            if y < min_y:
-                min_y = y
-
-for x in range(max_range):
-    for y in range(max_range):
-        if matrix[x][y] == 1:
-            if x > max_x:
-                max_x = x + 1
-            if y > max_y:
-                max_y = y + 1
-
-area = (max_x - min_x) * (max_y - min_y)
+        if matrix[x][y] == 1 or matrix[x][y] == 3:
+            area += 1
 
 print(area)
