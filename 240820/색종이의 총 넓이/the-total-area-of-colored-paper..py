@@ -1,5 +1,5 @@
 offset = 100
-max_range = 2 * offset + 8
+max_range = 2 * offset
 
 matrix = [
     [0] * max_range
@@ -14,7 +14,7 @@ for _ in range(N):
 
     for x in range(x, x + 8):
         for y in range(y, y + 8):
-            matrix[x][y] += 1
+            matrix[x][y] = 1
 
 area = 0
 
