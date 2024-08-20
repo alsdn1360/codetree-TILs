@@ -1,5 +1,5 @@
 offset = 100
-max_range = 2 * offset
+max_range = 2 * offset + 1
 
 matrix = [
     [0] * max_range
