@@ -1,6 +1,6 @@
 N = int(input())
 arr = []
-cnt = 1
+cnt = 0
 max_cnt = 0
 
 for i in range(N):
