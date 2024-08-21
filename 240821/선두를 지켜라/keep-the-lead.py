@@ -22,7 +22,10 @@ for i in range(1, len(A)):
     elif A[i] < B[i]:
         first_person.append('B')
     else:
-        first_person.append(first_person[-1])
+        first_person.append('N')
+
+while 'N' in first_person:
+    first_person.remove('N')
 
 change_first_cnt = 0
 
